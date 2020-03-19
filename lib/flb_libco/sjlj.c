@@ -9,6 +9,7 @@
   for SJLJ on other systems, one would want to rewrite springboard() and co_create() and hack the jmb_buf stack pointer.
 */
 
+#undef _FORTIFY_SOURCE /* triggers longjmp errors */
 #define LIBCO_C
 #include "libco.h"
 
